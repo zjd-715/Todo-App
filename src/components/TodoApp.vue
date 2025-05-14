@@ -150,7 +150,7 @@ async function handleLogout() {
         placeholder="添加新的待办事项"
         @keyup.enter="add"
       >
-      <div @click="add" class="add-btn">添加</div>
+      <button @click="add" class="add-btn">添加</button>
     </div>
     
     <!-- 待办事项列表 -->
@@ -209,12 +209,12 @@ async function handleLogout() {
 }
 
 .logout-btn:hover {
-  background: #f5f5f5;
+  background:rgb(249, 247, 247);
   color: #333;
 }
 
 .error-message {
-  background-color: #ffebee;
+  background-color: #faf7f8;
   color: #d32f2f;
   padding: 10px;
   border-radius: 5px;
@@ -244,5 +244,44 @@ async function handleLogout() {
 .box {
   width: 100%;
   overflow-wrap: break-word;
+}
+
+.todo-from {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  height: 55px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.add-btn {
+  height: 55px;
+  padding: 0 20px;
+  background: linear-gradient(to right, rgb(113,65,168), rgba(44,114,251,1));
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
 }
 </style> 

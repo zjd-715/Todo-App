@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
-  background-color: #f5f5f5;
+  background: linear-gradient(to right, rgb(113,65,168), rgba(44,114,251,1));
   overflow-x: hidden;
   width: 100%;
 }
@@ -51,19 +51,25 @@ body {
   display: flex;
   margin-bottom: 20px;
   width: 100%;
+  align-items: stretch;
 }
 
 .input {
   flex: 1;
-  padding: 12px;
+  height: 40px;
+  padding: 0 12px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
   outline: none;
   font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .add-btn {
-  padding: 12px 20px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
   background: linear-gradient(to right, rgb(113,65,168), rgba(44,114,251,1));
   color: white;
   border: none;
@@ -71,6 +77,11 @@ body {
   cursor: pointer;
   font-size: 16px;
   transition: opacity 0.3s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .add-btn:hover {
@@ -116,6 +127,10 @@ body {
   padding: 6px 10px;
   border-radius: 4px;
   transition: all 0.2s;
+  white-space: nowrap;
+  min-width: 40px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .del:hover {
